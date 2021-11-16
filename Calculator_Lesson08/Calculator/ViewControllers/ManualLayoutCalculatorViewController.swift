@@ -294,7 +294,30 @@ class ManualLayoutCalculatorViewController: AbstractCalculatorViewController {
             percentButton.heightAnchor.constraint(equalTo: equalButton.heightAnchor)
         ])
         
+        let invertButton = unaryOperatorButtonTapped.generate(title: "+/-")
+        invertButton.addTarget(self, action: #selector(unaryOperatorButtonTapped), for: .touchUpInside)
+    
+        view.addSubview(invertButton)
         
+        NSLayoutConstraint.activate([
+            invertButton.trailingAnchor.constraint(equalTo: percentButton.leadingAnchor, constant: -20),
+            invertButton.bottomAnchor.constraint(equalTo: digit8Button.bottomAnchor, constant: -20),
+            invertButton.widthAnchor.constraint(equalTo: equalButton.widthAnchor),
+            invertButton.heightAnchor.constraint(equalTo: equalButton.heightAnchor)
+        ])
+        
+        let clearButton = clearButtonTapped.generate(title: "AC")
+        clearButton.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
+    
+        view.addSubview(clearButton)
+        
+        NSLayoutConstraint.activate([
+            clearButton.trailingAnchor.constraint(equalTo: invertButton.leadingAnchor, constant: -20),
+            clearButton.bottomAnchor.constraint(equalTo: digit7Button.bottomAnchor, constant: -20),
+            clearButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            clearButton.widthAnchor.constraint(equalTo: equalButton.widthAnchor),
+            clearButton.heightAnchor.constraint(equalTo: equalButton.heightAnchor)
+        ])
         
     }
 }
