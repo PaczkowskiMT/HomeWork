@@ -13,6 +13,16 @@ enum BinaryOperand: Int {
     case divide = 101 // поделить
     case sum = 102 // сложить
     case substruct = 103 // вычесть
+    
+    static func buttonTitle() {
+        
+    }
+}
+
+enum UnaryOperand: Int {
+    case equal = 200
+    case percent = 201
+    case invert = 202
 }
 
 class StoryboardedCalculatorViewController: UIViewController {
@@ -44,17 +54,13 @@ class StoryboardedCalculatorViewController: UIViewController {
         super.viewDidLoad()
         
         displayText = "0"
-        
-        print("divide: \(Self.calculate(value1: 100, value2: 20, operand: .divide))")
-        print("sum: \(Self.calculate(value1: 100, value2: 20, operand: .sum))")
-        print("substruct: \(Self.calculate(value1: 100, value2: 20, operand: .substruct))")
-        print("multiply: \(Self.calculate(value1: 100, value2: 20, operand: .multiply))")
     }
     
     // MARK: - IBActions
     
-    @IBAction func equalityButoonPressed(_ sender: Any) {
-        updateDisplayText(with: String (equalityVaue))
+    @IBAction func unaryOperatorTapped(_ sender: UIButton) {
+        updateDisplayText(with: String())
+        
     }
     @IBAction func digitButtonTapped(_ digitButton: UIButton) {
         updateDisplayText(with: String(digitButton.tag))
@@ -111,5 +117,25 @@ class StoryboardedCalculatorViewController: UIViewController {
             return value1 - value2
         }
     }
+
+    func calculate(_ operand: UnaryOperand) {
+        var result: Double = Double(displayText) ?? 0
+        switch operand {
+        case .equal:
+            if let value1 = value1,
+            let value2 = value2,
+               let _ = self.operand {
+            result = Self.calculate(value1: value1, value2: value2, operand: self.operand!)
+            }
+        case .percent:
+            result = result / 100
+        case .invert:
+            result.negate()
+        }
+        displayText = String(result)
+        needToRestartTextLabel = false
+        self.operand = nill
+    }
 }
+
 
