@@ -7,31 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D283CAFC27319DAD00EFB4ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D283CAFB27319DAD00EFB4ED /* AppDelegate.swift */; };
-		D283CAFE27319DAD00EFB4ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D283CAFD27319DAD00EFB4ED /* SceneDelegate.swift */; };
-		D283CB0027319DAD00EFB4ED /* StoryboardedCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D283CAFF27319DAD00EFB4ED /* StoryboardedCalculatorViewController.swift */; };
-		D283CB0327319DAD00EFB4ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D283CB0127319DAD00EFB4ED /* Main.storyboard */; };
-		D283CB0527319DAE00EFB4ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D283CB0427319DAE00EFB4ED /* Assets.xcassets */; };
-		D283CB0827319DAE00EFB4ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D283CB0627319DAE00EFB4ED /* LaunchScreen.storyboard */; };
-		D283CB13273662B900EFB4ED /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D283CB12273662B900EFB4ED /* RoundedButton.swift */; };
-		D283CB17273669AF00EFB4ED /* BinaryOperatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D283CB16273669AF00EFB4ED /* BinaryOperatorButton.swift */; };
+		878855A72748239B005F6122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878855A62748239B005F6122 /* AppDelegate.swift */; };
+		878855A92748239B005F6122 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878855A82748239B005F6122 /* SceneDelegate.swift */; };
+		878855AB2748239B005F6122 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878855AA2748239B005F6122 /* ViewController.swift */; };
+		878855AE2748239B005F6122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878855AC2748239B005F6122 /* Main.storyboard */; };
+		878855B02748239C005F6122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 878855AF2748239C005F6122 /* Assets.xcassets */; };
+		878855B32748239C005F6122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878855B12748239C005F6122 /* LaunchScreen.storyboard */; };
+		878855BB274824E2005F6122 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878855BA274824E2005F6122 /* StudentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D283CAF827319DAD00EFB4ED /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D283CAFB27319DAD00EFB4ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D283CAFD27319DAD00EFB4ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D283CAFF27319DAD00EFB4ED /* StoryboardedCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardedCalculatorViewController.swift; sourceTree = "<group>"; };
-		D283CB0227319DAD00EFB4ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D283CB0427319DAE00EFB4ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D283CB0727319DAE00EFB4ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D283CB0927319DAE00EFB4ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D283CB12273662B900EFB4ED /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		D283CB16273669AF00EFB4ED /* BinaryOperatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryOperatorButton.swift; sourceTree = "<group>"; };
+		878855A32748239B005F6122 /* Student List, table view.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student List, table view.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		878855A62748239B005F6122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		878855A82748239B005F6122 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		878855AA2748239B005F6122 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		878855AD2748239B005F6122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		878855AF2748239C005F6122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		878855B22748239C005F6122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		878855B42748239C005F6122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		878855BA274824E2005F6122 /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D283CAF527319DAD00EFB4ED /* Frameworks */ = {
+		878855A02748239B005F6122 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,82 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D283CAEF27319DAD00EFB4ED = {
+		8788559A2748239B005F6122 = {
 			isa = PBXGroup;
 			children = (
-				D283CAFA27319DAD00EFB4ED /* Calculator */,
-				D283CAF927319DAD00EFB4ED /* Products */,
+				878855A52748239B005F6122 /* Student List, table view */,
+				878855A42748239B005F6122 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D283CAF927319DAD00EFB4ED /* Products */ = {
+		878855A42748239B005F6122 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D283CAF827319DAD00EFB4ED /* Calculator.app */,
+				878855A32748239B005F6122 /* Student List, table view.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D283CAFA27319DAD00EFB4ED /* Calculator */ = {
+		878855A52748239B005F6122 /* Student List, table view */ = {
 			isa = PBXGroup;
 			children = (
-				D283CB112736628D00EFB4ED /* CommonViews */,
-				D283CAFB27319DAD00EFB4ED /* AppDelegate.swift */,
-				D283CAFD27319DAD00EFB4ED /* SceneDelegate.swift */,
-				D283CAFF27319DAD00EFB4ED /* StoryboardedCalculatorViewController.swift */,
-				D283CB0127319DAD00EFB4ED /* Main.storyboard */,
-				D283CB0427319DAE00EFB4ED /* Assets.xcassets */,
-				D283CB0627319DAE00EFB4ED /* LaunchScreen.storyboard */,
-				D283CB0927319DAE00EFB4ED /* Info.plist */,
+				878855A62748239B005F6122 /* AppDelegate.swift */,
+				878855A82748239B005F6122 /* SceneDelegate.swift */,
+				878855AA2748239B005F6122 /* ViewController.swift */,
+				878855AC2748239B005F6122 /* Main.storyboard */,
+				878855BA274824E2005F6122 /* StudentsViewController.swift */,
+				878855AF2748239C005F6122 /* Assets.xcassets */,
+				878855B12748239C005F6122 /* LaunchScreen.storyboard */,
+				878855B42748239C005F6122 /* Info.plist */,
 			);
-			path = Calculator;
-			sourceTree = "<group>";
-		};
-		D283CB112736628D00EFB4ED /* CommonViews */ = {
-			isa = PBXGroup;
-			children = (
-				D283CB12273662B900EFB4ED /* RoundedButton.swift */,
-				D283CB16273669AF00EFB4ED /* BinaryOperatorButton.swift */,
-			);
-			path = CommonViews;
+			path = "Student List, table view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D283CAF727319DAD00EFB4ED /* Calculator */ = {
+		878855A22748239B005F6122 /* Student List, table view */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D283CB0C27319DAE00EFB4ED /* Build configuration list for PBXNativeTarget "Calculator" */;
+			buildConfigurationList = 878855B72748239C005F6122 /* Build configuration list for PBXNativeTarget "Student List, table view" */;
 			buildPhases = (
-				D283CAF427319DAD00EFB4ED /* Sources */,
-				D283CAF527319DAD00EFB4ED /* Frameworks */,
-				D283CAF627319DAD00EFB4ED /* Resources */,
+				8788559F2748239B005F6122 /* Sources */,
+				878855A02748239B005F6122 /* Frameworks */,
+				878855A12748239B005F6122 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Calculator;
-			productName = Calculator;
-			productReference = D283CAF827319DAD00EFB4ED /* Calculator.app */;
+			name = "Student List, table view";
+			productName = "Student List, table view";
+			productReference = 878855A32748239B005F6122 /* Student List, table view.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D283CAF027319DAD00EFB4ED /* Project object */ = {
+		8788559B2748239B005F6122 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					D283CAF727319DAD00EFB4ED = {
+					878855A22748239B005F6122 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
-			buildConfigurationList = D283CAF327319DAD00EFB4ED /* Build configuration list for PBXProject "Calculator" */;
+			buildConfigurationList = 8788559E2748239B005F6122 /* Build configuration list for PBXProject "Student List, table view" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,57 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = D283CAEF27319DAD00EFB4ED;
-			productRefGroup = D283CAF927319DAD00EFB4ED /* Products */;
+			mainGroup = 8788559A2748239B005F6122;
+			productRefGroup = 878855A42748239B005F6122 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D283CAF727319DAD00EFB4ED /* Calculator */,
+				878855A22748239B005F6122 /* Student List, table view */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D283CAF627319DAD00EFB4ED /* Resources */ = {
+		878855A12748239B005F6122 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D283CB0827319DAE00EFB4ED /* LaunchScreen.storyboard in Resources */,
-				D283CB0527319DAE00EFB4ED /* Assets.xcassets in Resources */,
-				D283CB0327319DAD00EFB4ED /* Main.storyboard in Resources */,
+				878855B32748239C005F6122 /* LaunchScreen.storyboard in Resources */,
+				878855B02748239C005F6122 /* Assets.xcassets in Resources */,
+				878855AE2748239B005F6122 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D283CAF427319DAD00EFB4ED /* Sources */ = {
+		8788559F2748239B005F6122 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D283CB17273669AF00EFB4ED /* BinaryOperatorButton.swift in Sources */,
-				D283CB0027319DAD00EFB4ED /* StoryboardedCalculatorViewController.swift in Sources */,
-				D283CAFC27319DAD00EFB4ED /* AppDelegate.swift in Sources */,
-				D283CAFE27319DAD00EFB4ED /* SceneDelegate.swift in Sources */,
-				D283CB13273662B900EFB4ED /* RoundedButton.swift in Sources */,
+				878855BB274824E2005F6122 /* StudentsViewController.swift in Sources */,
+				878855AB2748239B005F6122 /* ViewController.swift in Sources */,
+				878855A72748239B005F6122 /* AppDelegate.swift in Sources */,
+				878855A92748239B005F6122 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D283CB0127319DAD00EFB4ED /* Main.storyboard */ = {
+		878855AC2748239B005F6122 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D283CB0227319DAD00EFB4ED /* Base */,
+				878855AD2748239B005F6122 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D283CB0627319DAE00EFB4ED /* LaunchScreen.storyboard */ = {
+		878855B12748239C005F6122 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D283CB0727319DAE00EFB4ED /* Base */,
+				878855B22748239C005F6122 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -182,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D283CB0A27319DAE00EFB4ED /* Debug */ = {
+		878855B52748239C005F6122 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -243,7 +231,7 @@
 			};
 			name = Debug;
 		};
-		D283CB0B27319DAE00EFB4ED /* Release */ = {
+		878855B62748239C005F6122 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -298,20 +286,19 @@
 			};
 			name = Release;
 		};
-		D283CB0D27319DAE00EFB4ED /* Debug */ = {
+		878855B82748239C005F6122 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58FKCP5X8C;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Calculator/Info.plist;
+				INFOPLIST_FILE = "Student List, table view/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = NO;
-				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -320,7 +307,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.productiveapps.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = "app.Pachkovskiy.Student-List--table-view";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -328,20 +315,19 @@
 			};
 			name = Debug;
 		};
-		D283CB0E27319DAE00EFB4ED /* Release */ = {
+		878855B92748239C005F6122 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58FKCP5X8C;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Calculator/Info.plist;
+				INFOPLIST_FILE = "Student List, table view/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = NO;
-				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -350,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.productiveapps.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = "app.Pachkovskiy.Student-List--table-view";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -361,25 +347,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D283CAF327319DAD00EFB4ED /* Build configuration list for PBXProject "Calculator" */ = {
+		8788559E2748239B005F6122 /* Build configuration list for PBXProject "Student List, table view" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D283CB0A27319DAE00EFB4ED /* Debug */,
-				D283CB0B27319DAE00EFB4ED /* Release */,
+				878855B52748239C005F6122 /* Debug */,
+				878855B62748239C005F6122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D283CB0C27319DAE00EFB4ED /* Build configuration list for PBXNativeTarget "Calculator" */ = {
+		878855B72748239C005F6122 /* Build configuration list for PBXNativeTarget "Student List, table view" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D283CB0D27319DAE00EFB4ED /* Debug */,
-				D283CB0E27319DAE00EFB4ED /* Release */,
+				878855B82748239C005F6122 /* Debug */,
+				878855B92748239C005F6122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D283CAF027319DAD00EFB4ED /* Project object */;
+	rootObject = 8788559B2748239B005F6122 /* Project object */;
 }

@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Home Work from 30.10.2021
+//  Student List, table view
 //
-//  Created by Михаил on 1.11.21.
+//  Created by Михаил on 19.11.21.
 //
 
 import UIKit
