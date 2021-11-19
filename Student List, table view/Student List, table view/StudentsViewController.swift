@@ -10,10 +10,12 @@ import UIKit
 class StudentsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    let cellID = "cellID"
-    var dataSource = [["Aртимович Игорь Владимирович",
+    let cellIDMale = "cellID"
+    let cellIDFemale = "cellIDFemale"
+    var dataSource = ["Aртимович Игорь Владимирович",
                           "Богданович Дмитрий Александрович",
                           "Гришин Павел Андреевич",
+                          "Ефименко Анастасия Владимировна",
                           "Куклицкий Максим Сергеевич",
                           "Лапин Николай Владимирович",
                           "Малишевский Никита Валерьевич",
@@ -22,16 +24,13 @@ class StudentsViewController: UIViewController {
                           "Пачковский Михаил Тадеушевич",
                           "Савков Александр Геннадьевич",
                           "Симонов Владислав Дмитриевич",
-                         "Сысов Валерий Александрович"],
-                          ["Елисеева Марина Михайловна",
-                         "Букаренко Арина Олеговна",
-                         "Ефименко Анастасия Владимировна",
-                         "Пернацкая Алеся Юрьевна",
-                         "Сандова Галина Александровна"
-        ]]
-    var maleOrFemale = ["MALE",
-                        "FEMALE"]
-    
+                          "Сысов Валерий Александрович",
+        ]
+    var femaleDataSource = ["Букаренко Арина Олеговна",
+                            "Пернацкая Алеся Юрьевна",
+                            "Сандова Галина Александровна",
+                            "Елисеева Марина Михайловна",
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,15 +41,29 @@ extension StudentsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {return dataSource.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.maleOrFemale
+        return "Male"
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+    private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIDMale)
         if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
+            cell = UITableViewCell(style: .default, reuseIdentifier: cellIDMale)
         }
         cell?.textLabel!.text = dataSource[indexPath.row]
         return cell!
     }
-        
+    }
+extension StudentsViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {return femaleDataSource.count
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return "Female"
+    }
+    private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIDFemale)
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: cellIDFemale)
+        }
+        cell?.textLabel!.text = dataSource[indexPath.row]
+        return cell!
+    }
     }
