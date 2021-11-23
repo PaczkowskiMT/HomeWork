@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871BCFDF274D1B7000E887A1 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871BCFDE274D1B7000E887A1 /* SearchBar.swift */; };
 		878855A72748239B005F6122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878855A62748239B005F6122 /* AppDelegate.swift */; };
 		878855A92748239B005F6122 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878855A82748239B005F6122 /* SceneDelegate.swift */; };
 		878855AE2748239B005F6122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878855AC2748239B005F6122 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		871BCFDE274D1B7000E887A1 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		878855A32748239B005F6122 /* Student List, table view.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student List, table view.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		878855A62748239B005F6122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		878855A82748239B005F6122 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				878855A62748239B005F6122 /* AppDelegate.swift */,
 				878855A82748239B005F6122 /* SceneDelegate.swift */,
 				878855AC2748239B005F6122 /* Main.storyboard */,
+				871BCFDE274D1B7000E887A1 /* SearchBar.swift */,
 				878855BA274824E2005F6122 /* StudentsViewController.swift */,
 				878855AF2748239C005F6122 /* Assets.xcassets */,
 				878855B12748239C005F6122 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				878855BB274824E2005F6122 /* StudentsViewController.swift in Sources */,
+				871BCFDF274D1B7000E887A1 /* SearchBar.swift in Sources */,
 				878855A72748239B005F6122 /* AppDelegate.swift in Sources */,
 				878855A92748239B005F6122 /* SceneDelegate.swift in Sources */,
 			);
