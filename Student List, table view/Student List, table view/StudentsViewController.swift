@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol StudentRenameButton {
+    func update(button: String)
+}
+
 class StudentsViewController: UIViewController {
- 
+    
     @IBAction func view(_ sender: UIButton) {
         performSegue(withIdentifier: "TappedOpen", sender: self)
     }
+    
     @IBOutlet weak var tableView: UITableView!
     
     var male = ["Aртимович Игорь Владимирович",
@@ -111,5 +116,19 @@ extension StudentsViewController: UITableViewDataSource {
 extension StudentsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterText = searchText
+    }
+}
+
+extension StudentsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+        let name: String
+        if indexPath.section == 0  {
+            name = filteredMale[indexPath.row]
+        } else {
+            name = filteredFemale[indexPath.row]
+        }
+        
+        print ("Selected \(name)")
     }
 }

@@ -8,13 +8,22 @@
 import UIKit
 
 class SelectedStudentViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var selectButton: UIButton!
+    
+    @IBAction func selectButtonTapped (_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "StudentsViewController") as! StudentsViewController vc.delegate = self
+        
+        present(vc, animated: true, completion: nil)
+    }
     }
     
+extension SelectedStudentViewController: StudentRenameButton {
+    
+    func didSelectStudent(_ student: String) {
+        selectButton.setTitle(student, for: .normal)
+    }
 
     /*
     // MARK: - Navigation
