@@ -7,15 +7,13 @@
 
 import UIKit
 
-protocol StudentRenameButton {
-    func update(button: String)
+protocol StudentsViewControllerDelegate: AnyObject{
+    func didSelectStudent(_ student: String)
 }
 
 class StudentsViewController: UIViewController {
     
-    @IBAction func view(_ sender: UIButton) {
-        performSegue(withIdentifier: "TappedOpen", sender: self)
-    }
+    weak var delegate: StudentsViewControllerDelegate?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -122,13 +120,19 @@ extension StudentsViewController: UISearchBarDelegate {
 extension StudentsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
+        tableview.deselectRow(at: indexPath, animated: true)
         let name: String
-        if indexPath.section == 0  {
-            name = filteredMale[indexPath.row]
-        } else {
-            name = filteredFemale[indexPath.row]
-        }
-        
+        name = dataSource[indexPath.section][indexPath.row]
         print ("Selected \(name)")
+
+        delegate?.didSelectStudent(name)
+        dismiss(animated: true, completion: nil)
+        
+    }
+}
+
+extension StudentsViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterText = searchText
     }
 }
