@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Student List, table view
+//  StudentList
 //
-//  Created by Михаил on 19.11.21.
+//  Created by Марина Елисеева on 16.11.21.
 //
 
 import UIKit
@@ -19,13 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let viewController = StudentsViewController()
-        viewController.shouldAddSelectButton = true
-        viewController.shouldAddSearchBar = true
-        viewController.male = []
-        viewController.female = []
+        let vc = StudentViewController()
+        vc.shouldAddSelectButton = true
+        vc.shouldAddSearchBar = true
+        vc.men = []
+        vc.women = []
         
-        window?.rootViewController = viewController
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
 

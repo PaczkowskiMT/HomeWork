@@ -1,8 +1,8 @@
 //
 //  StudentCell.swift
-//  Student List, table view
+//  StudentList
 //
-//  Created by Михаил on 25.11.21.
+//  Created by Марина Елисеева on 21.11.21.
 //
 
 import UIKit

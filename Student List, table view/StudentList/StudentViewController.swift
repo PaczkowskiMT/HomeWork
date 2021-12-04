@@ -1,17 +1,17 @@
 //
-//  StudentsViewController.swift
-//  Student List, table view
+//  StudentViewController.swift
+//  StudentList
 //
-//  Created by Михаил on 19.11.21.
+//  Created by Марина Елисеева on 16.11.21.
 //
 
 import UIKit
 
-protocol StudentsViewControllerDelegate: AnyObject{
-    func didSelectStudent(_ student: String)
+protocol StudentViewControllerDelegate: AnyObject {
+    func didSelectStudent(_ student: String, gender: Int, sender: UIViewController)
 }
 
-class StudentsViewController: UIViewController {
+class StudentViewController: UIViewController {
     
     private lazy var tableView = UITableView()
     private lazy var selectButton = UIButton(type: .custom)
@@ -19,30 +19,35 @@ class StudentsViewController: UIViewController {
     
     var shouldAddSelectButton = false
     var shouldAddSearchBar = false
+
+    weak var delegate: StudentViewControllerDelegate?
+    var didSelectStudentClosure: ((String, Int, UIViewController) -> ())?
+
+    var women: [String] = []
+    var men: [String] = []
     
-    weak var delegate: StudentsViewControllerDelegate?
-    
-    var male: [String] = []
-    var female: [String] = []
-    
-    private var filteredMale: [String] = []
-    private var filteredFemale: [String] = []
+    private var filteredMen: [String] = []
+    private var filteredWomen: [String] = []
     
     private var dataSource: [[String]] {
-        [filteredMale, filteredFemale]
+        [filteredMen, filteredWomen]
     }
     
-    private var filteredText: String? {
+    private var filterText: String? {
         didSet {
-            reloadFilterData()
+           reloadFilterData()
         }
     }
     
+    // MARK: - UIViewController LifeCycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         reloadFilterData()
     }
+    
+    // MARK: - Functions
     
     private func setup() {
         if shouldAddSearchBar {
@@ -114,17 +119,17 @@ class StudentsViewController: UIViewController {
     }
     
     private func resetDataSource() {
-        filteredMale = male
-        filteredFemale = female
+        filteredMen = men
+        filteredWomen = women
     }
     
     private func filterDataSource(_ filterText: String) {
         if filterText.count > 0 {
-            filteredMale = male.filter {
+            filteredMen = men.filter {
                 $0.lowercased().contains(filterText.lowercased())
             }
             
-            filteredFemale = female.filter {
+            filteredWomen = women.filter {
                 $0.lowercased().contains(filterText.lowercased())
             }
         } else {
@@ -143,19 +148,23 @@ class StudentsViewController: UIViewController {
     //MARK: - IBActions
     
     @objc private func selectButtonTapped() {
-        let viewController = StudentsViewController()
-        viewController.shouldAddSelectButton = false
-        viewController.shouldAddSearchBar = true
-        viewController.male = DataSource.menArray
-        viewController.female = DataSource.womenArray
+        let vc = StudentViewController()
+        vc.shouldAddSelectButton = false
+        vc.shouldAddSearchBar = true
+        vc.men = DataSource.menArray
+        vc.women = DataSource.womenArray
         
-        viewController.delegate = self
+       // vc.delegate = self
         
-        present(viewController, animated: true)
+        vc.didSelectStudentClosure = { [weak self] student, gender, sender in
+            self?.didSelectStudent(student, gender: gender, sender: sender)
+        }
+        
+        present(vc, animated: true)
     }
 }
 
-extension StudentsViewController: UITableViewDataSource {
+extension StudentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource[section].count
     }
@@ -188,12 +197,14 @@ extension StudentsViewController: UITableViewDataSource {
     }
 }
 
-extension StudentsViewController: UITableViewDelegate {
+extension StudentViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
         delegate?.didSelectStudent(dataSource[indexPath.section][indexPath.row], gender: indexPath.section, sender: self)
-        }
+        didSelectStudentClosure?(dataSource[indexPath.section][indexPath.row], indexPath.section, self)
+            
+    }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return shouldAddSelectButton
@@ -203,12 +214,12 @@ extension StudentsViewController: UITableViewDelegate {
         let nameToDelete = dataSource[indexPath.section][indexPath.row]
         if editingStyle == .delete {
             if indexPath.section == 0 {
-                if let index = male.firstIndex(of: nameToDelete) {
-                    male.remove(at: index)
+                if let index = men.firstIndex(of: nameToDelete) {
+                    men.remove(at: index)
                 }
             } else {
-                if let index = female.firstIndex(of: nameToDelete) {
-                    female.remove(at: index)
+                if let index = women.firstIndex(of: nameToDelete) {
+                    women.remove(at: index)
                 }
             }
             
@@ -223,23 +234,23 @@ extension StudentsViewController: UITableViewDelegate {
     }
 }
 
-extension StudentsViewController: UISearchBarDelegate {
+extension StudentViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterText = searchText
     }
 }
 
-extension StudentsViewController: StudentViewControllerDelegate {
+extension StudentViewController: StudentViewControllerDelegate {
     func didSelectStudent(_ student: String, gender: Int, sender: UIViewController) {
         
         var alreadyExist = false
         
         if gender == 0 {
-            if male.contains(student) {
+            if men.contains(student) {
                 alreadyExist = true
             }
         } else {
-            if female.contains(student) {
+            if women.contains(student) {
                 alreadyExist = true
             }
         }
@@ -252,9 +263,9 @@ extension StudentsViewController: StudentViewControllerDelegate {
         sender.dismiss(animated: true, completion: nil)
         
         if gender == 0 {
-            male.append(student)
+            men.append(student)
         } else {
-            female.append(student)
+            women.append(student)
         }
         
         reloadFilterData()

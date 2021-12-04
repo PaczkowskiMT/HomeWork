@@ -1,8 +1,8 @@
 //
 //  DataSource.swift
-//  Student List, table view
+//  StudentList
 //
-//  Created by Михаил on 3.12.21.
+//  Created by Nickolai Nikishin on 28.11.21.
 //
 
 import Foundation

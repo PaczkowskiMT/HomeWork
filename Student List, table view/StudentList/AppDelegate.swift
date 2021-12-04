@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Student List, table view
+//  StudentList
 //
-//  Created by Михаил on 19.11.21.
+//  Created by Марина Елисеева on 16.11.21.
 //
 
 import UIKit
