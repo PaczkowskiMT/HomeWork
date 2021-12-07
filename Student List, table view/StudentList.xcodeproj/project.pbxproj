@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		872B9341275F626600348DDC /* StudentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872B9340275F626600348DDC /* StudentManager.swift */; };
 		CC1CB3FF2744258900A7510F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB3FE2744258900A7510F /* AppDelegate.swift */; };
 		CC1CB4012744258900A7510F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB4002744258900A7510F /* SceneDelegate.swift */; };
 		CC1CB4032744258900A7510F /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB4022744258900A7510F /* StudentViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		872B9340275F626600348DDC /* StudentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentManager.swift; sourceTree = "<group>"; };
 		CC1CB3FB2744258900A7510F /* StudentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1CB3FE2744258900A7510F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC1CB4002744258900A7510F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				CC1CB3FE2744258900A7510F /* AppDelegate.swift */,
+				872B9340275F626600348DDC /* StudentManager.swift */,
 				CC1CB4002744258900A7510F /* SceneDelegate.swift */,
 				CC1CB4022744258900A7510F /* StudentViewController.swift */,
 				D29758EE275387E800D2A483 /* DataSource.swift */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC1CB439274AB48E00A7510F /* StudentCell.swift in Sources */,
+				872B9341275F626600348DDC /* StudentManager.swift in Sources */,
 				CC1CB4032744258900A7510F /* StudentViewController.swift in Sources */,
 				CC1CB3FF2744258900A7510F /* AppDelegate.swift in Sources */,
 				D29758EF275387E800D2A483 /* DataSource.swift in Sources */,
